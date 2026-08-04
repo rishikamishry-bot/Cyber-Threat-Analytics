@@ -89,3 +89,28 @@ The attackers maintained a crushing speed of **80,000 to 100,000 attacks every s
 
 ## Next Steps
 Now that the temporal anomalies are cleanly mapped and quantified, we are ready for **Step 4: Cross-Feature Correlation / Geolocation Analysis**. We will cross-reference these late-November timestamp spikes against source IP addresses and country codes to map out the geographic footprint of the attacking botnet infrastructure.
+
+## Step 4: Cross-Feature & Geolocation Analysis
+
+### Objective
+Cross-reference the late-November Port 1433 anomaly timestamps with geographic and network data to identify where the attack campaign originated and measure its scale.
+
+---
+
+### Key Findings
+
+* **Geographic Breakdown:** Traffic was evenly distributed across major global hosting hubs, led by The Netherlands (239 activity blocks), the United States (238), Russia (235), and China (219).
+* **Infrastructure Scale:** The campaign activated **87,801 unique IP addresses** across the two primary anomaly windows (Nov 21–22 and Nov 28–30).
+* **Threat Profile:** The broad global spread and massive IP count point to an automated, decentralized botnet using compromised servers and proxy networks to scan for open MSSQL databases.
+
+---
+
+### Data Note & Methodology Constraint
+
+> **Note on IP Metrics:** 
+> Because `master_df` stores pre-aggregated hourly telemetry rather than raw, unaggregated packet logs, individual source IP strings (`src_ip`) were rolled up during data ingestion. Instead of listing individual IP addresses, we evaluated the `unique_ips` metric to track how many distinct devices were active during the anomaly windows. This keeps memory usage low while still giving an accurate picture of total botnet size.
+
+---
+
+### Executive Summary
+The Port 1433 blitz was not a localized attack from a single bad actor or country. It was a large, coordinated global campaign leveraging nearly 88,000 distinct IP addresses to find and breach exposed database servers.
