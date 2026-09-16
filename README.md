@@ -1,4 +1,4 @@
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]([(https://colab.research.google.com/drive/1gK-KNmI5G5RQJQlgVMDDMCriMcwXWE-p?usp=sharing)])
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1gK-KNmI5G5RQJQlgVMDDMCriMcwXWE-p?usp=sharing)
 > **Live Workspace:** Click the badge above to open the executable Google Colab notebook with all raw data processing, $3\sigma$ calculations, risk scoring algorithms, and threat export scripts.
 ## Campaign Risk Analysis & Telemetry Overview
 
